@@ -1,0 +1,7 @@
+[example-cluster1]
+url = http://example-cluster1.domain.com
+port = 32311
+
+[example-cluster2]
+url = http://example-cluster2.domain.com
+port = 32311
