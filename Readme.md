@@ -1,5 +1,5 @@
 # bmmcli Docs
-This CLI let you control your brooklin cluster without messing with APIs and JSON string.
+This CLI let you control multiple brooklin clusters without messing with APIs and JSON string.
 ## Install
 ### Mac
 To install it on a mac run the bellow command:
