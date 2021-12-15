@@ -86,12 +86,13 @@ while switch(args.command):
         if input("are you sure you want to delete: " + args.stream + " ? (y/n)") != "y":
             exit(0)
         streams = csv_to_list(args.stream)
-        if bmm_client.get_stream(streams).status_code == 404:
-            print("Streams does not exist, nothing to delete.")
-            break
-        else:
-            bmm_client.delete_stream(streams)
-            break
+        for stream in streams:
+            if bmm_client.get_stream(stream).status_code == 404:
+                print("Streams does not exist, nothing to delete.")
+                break
+            else:
+                bmm_client.delete_stream(stream)
+                break
 
     if case('add-topic'):
         streams = csv_to_list(args.stream)

@@ -20,10 +20,9 @@ class bmmcli(object):
         data = requests.get(url)
         return data
 
-    def delete_stream(self, streams):
-        for stream in streams:
-            url = self.url + "/datastream/" + stream
-            requests.delete(url)
+    def delete_stream(self, stream):
+        url = self.url + "/datastream/" + stream
+        requests.delete(url)
 
     def toggle_stream(self, streams, action):
         for stream in streams:
